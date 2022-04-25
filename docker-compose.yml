@@ -1,0 +1,13 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    container_name: hotel_booking
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=hotel_booking
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
